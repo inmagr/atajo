@@ -13,27 +13,22 @@ public class Bicicleta {
         String marca = "Orbea";
     }
     
+        public static int sumar(int [] vector) {
+            int sum=0;
+        for(int i=0; i<vector.length; i++)
+        {
+            sum += vector[i];
+        }
+         return sum;
+        }
+    
     public static String rutaCorta(int [] camino1, int [] camino2, int [] camino3)
     {
-        int sum1 = 0;
-        int sum2 = 0;
-        int sum3 = 0;
+  
+        int sum1 = sumar(camino1);
+        int sum2 = sumar(camino2);
+        int sum3 = sumar(camino3);
         
-        for(int i=0; i<camino1.length; i++)
-        {
-            sum1 += camino1[i];
-        }
-        
-        for(int i=0; i<camino2.length; i++)
-        {
-            sum2 += camino2[i];
-        }
-         
-        for(int i=0; i<camino3.length; i++)
-        {
-            sum3 += camino3[i];
-        }
-         
         if(sum1 < sum2 && sum1 < sum3)
         {
             return "camino 1"; 
